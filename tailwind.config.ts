@@ -8,6 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        '2xl': '1380px'
+      },
+      colors: {
+        darkSky: '#001525',
+        bitDarkSky: '#030d15',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
