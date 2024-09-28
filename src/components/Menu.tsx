@@ -19,6 +19,8 @@ export default function Menu() {
                 <Link href={'/'}>Cart(1)</Link>
             </div>
 
+            
+
         </div>
     )
 }
