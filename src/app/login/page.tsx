@@ -169,7 +169,7 @@ export default function LoginPage() {
               </button>
 
               {/* AFTER SUBMIT BUTTON CONTENT */}
-              {error && <div className=" h-10 w-full bg-red-200 rounded-md flex justify-center items-center text-red-600">{error}</div>}
+              {error && <div className=" h-10 w-full bg-red-300 rounded-md flex justify-center items-center text-red-700">{error}</div>}
               {mode === MODE.LOGIN && (
                 <div onClick={() => setMode(MODE.REGISTER)} className=" cursor-pointer text-center text-gray-300 hover:text-white duration-150">{"Don't"} have an account?</div>
               )}
@@ -180,7 +180,7 @@ export default function LoginPage() {
                 <div onClick={() => setMode(MODE.LOGIN)} className=" cursor-pointer text-center text-gray-300 hover:text-white duration-150"> Go back to login </div>
               )}
 
-              {message && <div className="h-10 w-full bg-red-200 rounded-md flex justify-center items-center text-green-600">{message}</div>}
+              {message && <div className="h-10 w-full bg-green-300 rounded-md flex justify-center items-center text-green-700">{message}</div>}
             </form>
           </div>
         </div>
