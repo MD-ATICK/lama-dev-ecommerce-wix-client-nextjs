@@ -47,7 +47,7 @@ const HomePage = async () => {
       {/* NEW PRODUCT LIST */}
       <div className=" container mx-auto px-[5vw] sm:px-2 py-16">
         <h1 className=" font-bold text-3xl">New Product</h1>
-        {/* <ProductList /> */}
+        <ProductList categoryId={process.env.FEATURED_PRODUCT_CATEGORY_ID!} />
       </div>
     </div>
   )
