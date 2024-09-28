@@ -11,6 +11,10 @@ interface props {
 export default function Add({ productId, variantId, stockNumber }: props) {
     const [quantity, setQuantity] = useState(1);
     // const stockNumber = 4
+
+    const addToCart = () => {
+        
+    }
     return (
         <div>
             <h4 className=" font-medium">Choose a quantity</h4>
@@ -23,14 +27,14 @@ export default function Add({ productId, variantId, stockNumber }: props) {
                     </div>
                     {
                         stockNumber === 0 ?
-                        <div className=" text-sm text-red-500 font-medium">Out of Stock!</div>
+                            <div className=" text-sm text-red-500 font-medium">Out of Stock!</div>
                             :
                             <div className=" text-sm">
                                 only <span className=" text-sky-500 font-medium">{stockNumber} items</span> lefts! <br /> {"Don't"} {" "} miss it
                             </div>
                     }
                 </div>
-                <button className=" mt-1 rounded-full ring-1 ring-sky-800  text-sm text-sky-500 py-2 px-5 font-medium text-center hover:bg-sky-800 hover:text-white duration-300  ">Add to Cart</button>
+                <button disabled={stockNumber === 0} onClick={addToCart} className=" disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:text-sky-500 mt-1 rounded-full ring-1 ring-sky-800  text-sm text-sky-500 py-2 px-5 font-medium text-center hover:bg-sky-800 hover:text-white duration-300  ">Add to Cart</button>
             </div>
 
         </div>

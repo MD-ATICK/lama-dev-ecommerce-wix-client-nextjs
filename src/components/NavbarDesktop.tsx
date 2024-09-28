@@ -19,9 +19,9 @@ export default function NavbarDesktop() {
         <div className={`flex text-sm md:hidden lg:flex font-medium items-center gap-x-3 text-gray-400`}>
           <Link className=' hover:text-white duration-300' href={'/'}>Home</Link>
           <Link className=' hover:text-white duration-300' href={'/list'}>Shop</Link>
-          <Link className=' hover:text-white duration-300' href={'/'}>Deals</Link>
-          <Link className=' hover:text-white duration-300' href={'/'}>About</Link>
-          <Link className=' hover:text-white duration-300' href={'/'}>Contact</Link>
+          <Link className=' hover:text-white duration-300' href={'/deals'}>Deals</Link>
+          <Link className=' hover:text-white duration-300' href={'/about'}>About</Link>
+          <Link className=' hover:text-white duration-300' href={'/contact'}>Contact</Link>
           <Link className=' hover:text-white duration-300' href={'/cart'}>Cart(1)</Link>
         </div>
       </div>

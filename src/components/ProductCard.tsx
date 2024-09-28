@@ -2,6 +2,7 @@ import { products } from "@wix/stores";
 import DOMPurify from "isomorphic-dompurify";
 import Image from "next/image";
 import Link from "next/link";
+import AddToCartButton from "./AddToCartButton";
 
 
 interface props {
@@ -14,6 +15,7 @@ const image2 = 'https://images.pexels.com/photos/4352247/pexels-photo-4352247.jp
 export default function ProductCard({ product }: props) {
 
     const productDesc = product.additionalInfoSections?.find(section => section.title === 'shortDesc')?.description || ""
+
 
     return (
         <Link href={`/${product.slug}`} className=" w-full flex flex-col gap-4 sm:w-[47%] md:w-[30%] xl:w-[23%]">
@@ -31,6 +33,7 @@ export default function ProductCard({ product }: props) {
                         fill
                         sizes="300px"
                         alt=""
+                        decoding='async'
                         className="absolute object-cover rounded-md"
                     />
                 }
@@ -46,7 +49,7 @@ export default function ProductCard({ product }: props) {
                     <div className=" text-sm text-gray-400 font-medium" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(productDesc) }} />
                 }
             </div>
-            <button className=" mt-1 w-[50%] rounded-full ring-1 ring-sky-800  text-sm text-sky-500 py-[6px] px-4 text-center hover:bg-sky-800 hover:text-white duration-300  ">Add to Cart</button>
+            <AddToCartButton product={product} quantity={1} />
         </Link>
     )
 }

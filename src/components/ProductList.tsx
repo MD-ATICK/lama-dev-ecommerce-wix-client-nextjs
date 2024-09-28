@@ -38,7 +38,7 @@ export default async function ProductList({ categoryId, limit, searchParams }: p
     const res = await productQuery.find()
 
     return (
-        <div>
+        <div className=" px-[2vw] ">
             <div className=" w-full mt-12 flex justify-between flex-wrap gap-x-8 gap-y-16">
                 {
                     res.items.length === 0 && <p>no product found!</p>

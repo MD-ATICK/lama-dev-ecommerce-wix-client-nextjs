@@ -64,10 +64,10 @@ export default function NavIcons() {
           <Link href={'/login'} className=' px-5 py-[10px] font-medium text-sm bg-sky-700 hover:bg-sky-600 rounded-md' onClick={() => router.push('/login')}>
             Login
           </Link>
-          <button className=' text-center p-2 rounded-md w-full  relative duration-300'>
+          <Link href={'/cart'} className=' text-center p-2 rounded-md w-full  relative duration-300'>
             <ShoppingBag size={20} />
             <span className=' text-xs bg-sky-600 text-white rounded-full h-4 aspect-square flex justify-center items-center absolute -top-1 -right-[6px]'>1</span>
-          </button>
+          </Link>
         </div>
       }
       {
@@ -78,10 +78,10 @@ export default function NavIcons() {
             <Bell />
             <span className=' text-xs bg-sky-600 text-white rounded-full h-4 aspect-square flex justify-center items-center absolute top-0 -right-[4px]'>1</span>
           </button> */}
-          <button className=' text-center p-2 rounded-md w-full  relative duration-300'>
+          <Link href={'/cart'} className=' text-center p-2 rounded-md w-full  relative duration-300'>
             <ShoppingBag size={20} />
             <span className=' text-xs bg-sky-600 text-white rounded-full h-4 aspect-square flex justify-center items-center absolute -top-1 -right-[6px]'>1</span>
-          </button>
+          </Link>
         </div>
       }
 
@@ -89,7 +89,7 @@ export default function NavIcons() {
       {
         contentShow &&
         <div ref={popoverRef} className=' p-2 shadow-lg z-50 bg-white text-black absolute top-12 right-12  font-semibold text-sm rounded-lg w-[140px]'>
-          <button onClick={() => handleItemClick('cart')} className=' text-center p-2 relative rounded-md w-full hover:bg-gray-300 duration-300'>
+          <button className=' text-center p-2 relative rounded-md w-full hover:bg-gray-300 duration-300'>
             Notifications
             <span className=' text-xs bg-sky-600 text-white rounded-full h-4 aspect-square flex justify-center items-center absolute top-0 right-0'>1</span>
           </button>

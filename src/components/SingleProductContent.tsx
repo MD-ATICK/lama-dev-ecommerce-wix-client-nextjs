@@ -8,6 +8,7 @@ interface props {
 }
 export default function SingleProductContent({ product }: props) {
 
+
     return (
         <div className=" flex flex-col gap-4">
             <h1 className=" text-2xl font-medium">{product.name}</h1>
