@@ -1,4 +1,5 @@
 // "use client"  - c
+import Brands from "@/components/Brands"
 import CategoryList from "@/components/CategoryList"
 import ProductList from "@/components/ProductList"
 import Slider from "@/components/Slider"
@@ -47,7 +48,13 @@ const HomePage = async () => {
       {/* NEW PRODUCT LIST */}
       <div className=" container mx-auto px-[5vw] sm:px-2 py-16">
         <h1 className=" font-bold text-3xl">New Product</h1>
-        <ProductList categoryId={process.env.FEATURED_PRODUCT_CATEGORY_ID!} />
+        <Suspense fallback={'loading'}>
+          <ProductList categoryId={process.env.FEATURED_PRODUCT_CATEGORY_ID!} />
+        </Suspense>
+
+      </div>
+      <div>
+        <Brands />
       </div>
     </div>
   )

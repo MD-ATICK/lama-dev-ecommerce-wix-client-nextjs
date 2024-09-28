@@ -12,7 +12,7 @@ export default function CategoryCard({ category }: props) {
 
 
     return (
-        <Link href={`/list?cat=${category.slug}`} className=" flex-shrink-0 w-full sm:w-[40%] lg:w-1/4 xl:w-1/5">
+        <Link href={`/list?cat=${category.slug}`} className=" flex-shrink-0 w-[80%] rounded-md overflow-hidden sm:w-[40%] lg:w-1/4 xl:w-1/5">
             <div className=" relative bg-slate-100 w-full h-96">
                 <Image src={category.media?.mainMedia?.image?.url || image}
                     fill

@@ -49,7 +49,10 @@ export default async function ProductList({ categoryId, limit, searchParams }: p
                     ))
                 }
             </div>
+            {
+                (res.hasNext() || res.hasPrev()) &&
             <Pagination currentPage={res.currentPage || 0} hasNext={res.hasNext()} hasPrev={res.hasPrev()}  />
+            }
         </div>
     )
 }
