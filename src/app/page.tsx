@@ -1,5 +1,4 @@
 // "use client"  - c
-import Brands from "@/components/Brands"
 import CategoryList from "@/components/CategoryList"
 import ProductList from "@/components/ProductList"
 import Slider from "@/components/Slider"
@@ -53,9 +52,9 @@ const HomePage = async () => {
         </Suspense>
 
       </div>
-      <div>
+      {/* <div>
         <Brands />
-      </div>
+      </div> */}
     </div>
   )
 }

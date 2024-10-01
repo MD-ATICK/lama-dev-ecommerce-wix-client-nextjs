@@ -1,4 +1,3 @@
-import { Trash } from 'lucide-react'
 import Image from 'next/image'
 
 export default function CartCard() {
@@ -20,8 +19,8 @@ export default function CartCard() {
                     </div>
                 </div>
             </div>
-            <button className=" aspect-square h-10 rounded-md ring-1 ring-sky-700 hover:bg-sky-700  duration-150 text-sky-500 hover:text-white flex justify-center items-center">
-                <Trash className=" " size={18} />
+            <button className=" aspect-square text-sm font-medium px-3 h-10 rounded-md ring-1 ring-sky-700 hover:bg-sky-700  duration-150 text-sky-500 hover:text-white flex justify-center items-center">
+               Delete
             </button>
         </div>
     )

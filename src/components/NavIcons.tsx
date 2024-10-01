@@ -1,8 +1,8 @@
 "use client"
+import cart from '@/../public/cart.png';
 import cartoon from '@/../public/cartoon.jpg';
 import { useWixClient } from '@/hooks/useWixClient';
 import Cookies from 'js-cookie';
-import { ShoppingBag } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -65,8 +65,9 @@ export default function NavIcons() {
             Login
           </Link>
           <Link href={'/cart'} className=' text-center p-2 rounded-md w-full  relative duration-300'>
-            <ShoppingBag size={20} />
-            <span className=' text-xs bg-sky-600 text-white rounded-full h-4 aspect-square flex justify-center items-center absolute -top-1 -right-[6px]'>1</span>
+            {/* <ShoppingBag size={20} /> */}
+            <Image src={cart} height={30} alt='cart' />
+            <span className=' text-xs bg-sky-600 text-white rounded-full h-4 aspect-square flex justify-center items-center absolute -top-0 -right-[6px]'>1</span>
           </Link>
         </div>
       }
@@ -79,8 +80,9 @@ export default function NavIcons() {
             <span className=' text-xs bg-sky-600 text-white rounded-full h-4 aspect-square flex justify-center items-center absolute top-0 -right-[4px]'>1</span>
           </button> */}
           <Link href={'/cart'} className=' text-center p-2 rounded-md w-full  relative duration-300'>
-            <ShoppingBag size={20} />
-            <span className=' text-xs bg-sky-600 text-white rounded-full h-4 aspect-square flex justify-center items-center absolute -top-1 -right-[6px]'>1</span>
+            {/* <ShoppingBag size={20} /> */}
+            <Image src={cart} height={30} alt='cart' />
+            <span className=' text-xs bg-sky-600 text-white rounded-full h-4 aspect-square flex justify-center items-center absolute -top-0  -right-[6px]'>1</span>
           </Link>
         </div>
       }
